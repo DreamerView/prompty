@@ -31,11 +31,11 @@ export default function Modal({ list }) {
       aria-labelledby="categoriesModalLabel"
       aria-hidden="true"
     >
-      <div className="modal-dialog modal-dialog-centered modal-lg">
+      <div className="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
         <div className="modal-content border-0">
           <div className="modal-header border-0">
             <h1 className="modal-title fs-5" id="categoriesModalLabel">
-              Categories
+              ❤️‍🔥 Categories
             </h1>
             <button
               type="button"
@@ -48,8 +48,9 @@ export default function Modal({ list }) {
           <div className="modal-body">
             {list.map((render, index) => (
               <div key={index}>
-                <h3>
-                  {render.title.charAt(0).toUpperCase() + render.title.slice(1)}
+                <h3 className="d-flex gap-3 align-items-center">
+                  {render.title.charAt(0).toUpperCase() + render.title.slice(1)} 
+                  <Link onClick={handleClose} href={`/categories/${render.title}`} className="btn btn-secondary rounded-4 d-flex gap-2"><i className="bi bi-box-arrow-up-right"></i>View more</Link>
                 </h3>
 
                 <div className="d-flex flex-wrap gap-2 my-4">
