@@ -31,8 +31,8 @@ export default function Modal({ list }) {
       aria-labelledby="categoriesModalLabel"
       aria-hidden="true"
     >
-      <div className="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
-        <div className="modal-content border-0">
+      <div className="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div className="modal-content border-0 bg-black p-md-5">
           <div className="modal-header border-0">
             <h1 className="modal-title fs-5" id="categoriesModalLabel">
               ❤️‍🔥 Categories
@@ -50,7 +50,7 @@ export default function Modal({ list }) {
               <div key={index}>
                 <h3 className="d-flex gap-3 align-items-center">
                   {render.title.charAt(0).toUpperCase() + render.title.slice(1)} 
-                  <Link onClick={handleClose} href={`/categories/${render.title}`} className="btn btn-secondary rounded-4 d-flex gap-2"><i className="bi bi-box-arrow-up-right"></i>View more</Link>
+                  <Link onClick={handleClose} href={`/categories/${render.title}`} className="btn btn-dark rounded-4 d-flex gap-2"><i className="bi bi-box-arrow-up-right"></i>View more</Link>
                 </h3>
 
                 <div className="d-flex flex-wrap gap-2 my-4">
@@ -58,7 +58,7 @@ export default function Modal({ list }) {
                     <Link
                       key={idx}
                       href={`/tags/${attr}`}
-                      className="btn btn-light rounded-4"
+                      className="btn btn-dark rounded-4"
                       style={{ fontSize: "0.9rem" }}
                       onClick={handleClose}         /* ⬅️ закрываем модалку */
                     >
