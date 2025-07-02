@@ -26,7 +26,7 @@ export default function Header() {
                 <span className="d-md-block d-none">Back</span>
               </button>
             ) : (
-              <button className="btn btn-dark btn-lg rounded-4 d-flex gap-3">
+              <button className="btn btn-dark btn-lg rounded-4 d-flex gap-3" data-bs-toggle="modal" data-bs-target="#categoriesModal">
                 <i className="bi bi-list" />
                 <span className="d-md-block d-none">Categories</span>
               </button>
