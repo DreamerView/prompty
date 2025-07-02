@@ -16,7 +16,6 @@
   content: "";
   position: absolute;
   inset: 0;                 /* растянуть на весь header */
-  border-radius: 1rem;
 
   background: rgba(0, 0, 0, 0.35); /* полупрозрачная подложка */
   backdrop-filter: blur(16px);     /* размытие заднего плана */
