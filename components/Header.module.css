@@ -1,9 +1,37 @@
-.logo-hover {
-  transition: all 0.3s ease;
+/* Header.module.css  */
+.stickyGlass {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  /* чтобы псевдо-элемент оказался под содержимым,
+     а сам header стал «контейнером» для него */
+  position: sticky;
+  top: 0;
+  isolation: isolate;   /* создаём свой stacking-context */
 }
 
-.logo-hover:hover {
+/* сам эффект стекла */
+.stickyGlass::before {
+  content: "";
+  position: absolute;
+  inset: 0;                 /* растянуть на весь header */
+  border-radius: 1rem;
+
+  background: rgba(0, 0, 0, 0.35); /* полупрозрачная подложка */
+  backdrop-filter: blur(16px);     /* размытие заднего плана */
+  -webkit-backdrop-filter: blur(16px);
+
+  pointer-events: none;    /* клики проходят сквозь слой */
+  z-index: -1;             /* лежит ПОД контентом header */
+}
+
+/* анимация логотипа — без дефиса удобнее для CSS-Modules */
+.logoHover {
+  transition: transform .3s ease, filter .3s ease, opacity .3s ease;
+}
+.logoHover:hover {
   transform: scale(1.05);
-  filter: brightness(0.9);
-  opacity: 0.9;
+  filter: brightness(.9);
+  opacity: .9;
 }
