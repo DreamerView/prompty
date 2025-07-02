@@ -1,0 +1,50 @@
+.neon-hover {
+  all:unset;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: background 0.5s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.neon-hover:hover {
+  background: #eee;
+  color:#000;
+  animation: bgFlow 1s ease infinite;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2px;
+  background: linear-gradient(270deg, #a259ff, #00c2ff, #ff7755, #a259ff);
+  background-size: 600% 600%;
+  animation: borderFlow 5s linear infinite;
+  border-radius: inherit;
+  filter: blur(6px);
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
