@@ -5,21 +5,28 @@ import Link from "next/link";
 import Image from "next/image";
 import style from "./Cards.module.css";
 
-/* ------------ Один элемент таблицы ------------ */
 const CardItem = ({ render }) => {
-  const [imgSrc, setImgSrc] = useState(null);   // <- появится, когда файл готов
+  const [imgSrc, setImgSrc] = useState(null);
+  const [isWindowReady, setIsWindowReady] = useState(false);
 
+  // Проверим, доступен ли window
   useEffect(() => {
-    const img = new window.Image();
-    img.src = render.image;           // начинаем загрузку
-    img.onload = () => setImgSrc(render.image); // => файл в кэше, можно показывать
-  }, [render.image]);
+    setIsWindowReady(true);
+  }, []);
+
+  // Загружаем картинку только когда window доступен
+  useEffect(() => {
+    if (isWindowReady) {
+      const img = new window.Image();
+      img.src = render.image;
+      img.onload = () => setImgSrc(render.image);
+    }
+  }, [render.image, isWindowReady]);
 
   return (
     <div className="col-lg-4 col-md-6">
       <div className={`${style["neon-hover"]} d-block`}>
         <Link href={`/gallery/${render.id}`} style={{ all: "unset" }}>
-          {/* skeleton-рамка активна, пока imgSrc ещё null */}
           <div
             className={`w-100 h-auto ${!imgSrc ? style["gradient-border"] : ""}`}
             style={{ aspectRatio: 1.5, position: "relative" }}
@@ -33,9 +40,8 @@ const CardItem = ({ render }) => {
                 style={{
                   objectFit: "cover",
                   borderRadius: "1rem",
-                  transition: "none",      // без fade-in
+                  transition: "none",
                 }}
-                priority={false}
               />
             )}
           </div>
