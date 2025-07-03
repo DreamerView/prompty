@@ -14,7 +14,7 @@ export default async function TagsPage({ params }) {
 
   return (
     <>
-      <div className="container">
+      <div className="container-xl">
         <h1 className="mb-4">
           {id.charAt(0).toUpperCase() + id.slice(1)}
         </h1>

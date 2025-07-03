@@ -14,7 +14,7 @@ const TagsPage = async({ params }) => {
 
   return (
     <>
-        <div className="container">
+        <div className="container-xl">
             <h1 className="mb-4">#{id.charAt(0).toUpperCase() + id.slice(1)}</h1>
             <p className="text-muted">Найдено: {filtered.length}</p>
         </div>
