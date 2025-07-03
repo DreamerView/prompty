@@ -63,7 +63,7 @@ const CardItem = ({ render }) => {
 
 /* ------------ Грид карточек ------------ */
 const Cards = ({ list, title = "" }) => (
-  <div className="container py-4">
+  <div className="container-xl py-4">
     {title && <h1 className="mb-5">{title}</h1>}
 
     <div className="row">

@@ -10,7 +10,7 @@ export default function CardsSkeleton() {
     const placeholders = Array.from({ length: 9 });
 
     return (
-        <div className="container py-4">
+        <div className="container-xl py-4">
             <div className={`${style["gradient-border"]} mb-5 rounded-5`} style={{ height: 40, width:"20rem" }} />
             <div className="row">
                 {placeholders.map((_, i) => (

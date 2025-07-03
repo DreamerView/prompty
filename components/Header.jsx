@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className={styles.stickyGlass}>
-      <div className="container py-3 my-lg-4 my-4">
+      <div className="container-xl py-3 my-lg-4 my-2">
         <div className="row align-items-center">
           {/* левая колонка */}
           <div className="col-md-4 col-3 d-flex gap-3">
@@ -37,7 +37,7 @@ export default function Header() {
           <div className="col-md-4 col-6 d-flex justify-content-center">
             <Link className={styles.logoHover} href="/">
               {/* Заполняем контейнер по ширине, но ограничиваем maxWidth через класс */}
-              <div style={{ width: 200, maxWidth: "100%", position: "relative" }}>
+              <div style={{ width: "100%", maxWidth: 200, position: "relative" }}>
                 <Image
                     src={logo}            /* src, width, height, blurDataURL */
                   alt="Prompty Logo"

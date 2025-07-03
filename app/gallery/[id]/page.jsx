@@ -54,7 +54,7 @@ const GalleryPage = async({ params }) => {
     return (
         <>
             <Modal title={render.title} image={render.image} />
-            <div className="container py-lg-5 py-4">
+            <div className="container-xl py-lg-5 py-4">
                 <div className="row">
                     <div className="col-lg-5">
                         <div
