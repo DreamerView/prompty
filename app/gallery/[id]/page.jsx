@@ -4,6 +4,7 @@ import Cards from "@/components/Cards"
 import Link from "next/link";
 import CopySection from "./CopySelection";
 import Modal from "./Modal";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -36,20 +37,15 @@ export async function generateMetadata({ params }) {
 const GalleryPage = async({ params }) => {
     const {id} = await params;
     const render = list.find((f) => Number(f.id) === Number(id));
+    if (!render) {
+        return notFound();
+    }
     const keys = render['key'];
 
     const related = list.filter(item =>
         item.id !== render.id &&
         item.key.some(k => keys.includes(k))
     );
-
-    if (!render) {
-        return (
-            <div className="container py-5 text-center">
-                <h2>Промпт не найден 😢</h2>
-            </div>
-        );
-    }
 
     return (
         <>
