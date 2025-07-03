@@ -106,6 +106,42 @@ const list = [
     prompt: "A realistic portrait of the original person standing outdoors with the majestic Kazakh mountains (such as the Alatau range) in the background. The person wears traditional Kazakh clothing appropriate to their gender — a man in a velvet chapan and traditional hat like a borik or tymak, or a woman in a richly layered national dress with matching embroidered headwear. Their facial features remain fully visible and untouched. The expression is proud and serene. The natural cool daylight enhances the authenticity and atmosphere.",
     desc: "A proud, calm portrait in traditional Kazakh clothing with mountain scenery — culturally accurate and gender-aware.",
     key: ["kazakh", "mountains", "traditional", "gender-aware", "realism"]
+  },
+  {
+    id: 13,
+    type:"human",
+    title: "Silhouettes at Sunset – A Double Exposure Love Story",
+    image: "/gallery/13.png",
+    prompt: "A double cinematic exposure of us in profile, with a sunset landscape integrated into our silhouettes, showing both of us walking hand in hand on wet sand, with gentle sea waves crashing and the sky painted by the last rays of sunlight. A warm and intimate atmosphere, golden and orange tones, subtle and expressive details, 8K resolution.",
+    desc: "A romantic double exposure of a couple holding hands on the beach, sunset glowing through their intimate profile silhouettes.",
+    key: ["double_exposure","romantic_couple","sunset","silhouette","warm","emotion"]
+  },
+  {
+    id: 14,
+    type:"human",
+    title: "Golden Hour Picnic on the Hilltop",
+    image: "/gallery/14.png",
+    prompt: "A realistic photo of a couple having a picnic on a grassy hilltop at golden hour. A cozy blanket, fruits, flowers, and a view of distant mountains. The couple laughs while feeding each other strawberries. Lens flare, crisp natural detail, soft depth of field.",
+    desc: "A romantic hilltop picnic at golden hour with a laughing couple, strawberries, flowers, and a mountain view.",
+    key: ["realistic","picnic","hilltop","strawberries","couple","mountain"]
+  },
+  {
+    id: 15,
+    type:"human",
+    title: "Rainy Night Under One Umbrella",
+    image: "/gallery/15.png",
+    prompt: "A couple standing under a glowing streetlamp in a rainy city at night, sharing one umbrella. Reflections on the wet pavement, neon lights in the background. Ultra-realistic textures — water droplets, skin pores, clothes.",
+    desc: "A couple under one umbrella on a rainy night, neon reflections glowing on the wet pavement in a vibrant city.",
+    key: ["realistic","rainy","night","romance","couple","umbrella"]
+  },
+  {
+    id: 16,
+    type:"human",
+    title: "Cozy Movie Night at Home",
+    image: "/gallery/16.png",
+    prompt: "A realistic candid photo of a couple cuddling on a couch at night, wrapped in a blanket, watching a movie. Warm ambient light, popcorn on the table, soft expressions, very detailed shadows, fabric textures, and natural skin tones.",
+    desc: "A candid moment of a couple cuddling under a blanket, watching a movie with warm light and popcorn on the table.",
+    key: ["realistic","movie","couple","blanket","home"]
   }
 ];
 
